@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "test-redis-om"
+version = "0.1.0"
+description = ""
+authors = ["slorello89 <steve.lorello@redis.com>"]
+readme = "README.md"
+packages = [{include = "test_redis_om"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+redis-om = "^0.2.1"
+#pydantic = "^1.10.2" #uncomment this to fix
+email-validator = "^2.0.0.post2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+app = "test_redis_om.app:start"
